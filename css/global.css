@@ -1,0 +1,28 @@
+/* ===== RESET E VARIÁVEIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ===== CORES ===== */
+    --cor-primaria: #;
+    --cor-secundaria: #;
+    --cor-fundo: #fdf6f0;
+    --cor-branca: #ffffff;
+
+
+    /* ===== OUTROS ===== */
+    --cor-texto: #333;
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --borda-arredondada: 12px;
+}
+
+/* ===== ESTILO GERAL ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+
+}
