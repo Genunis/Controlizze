@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href=".././css/style.css">
+    <link rel="stylesheet" href=".././css/dashboard_premium.css">
+    <title>Dashboard - Controlizze</title>
+</head>
+<body>
+    <main class="container-principal">
+        <div class="header-page">
+            <div class="header-text">
+                <span class="subtitle">SEU DINHEIRO NO SEU RITMO</span>
+                <h1>Olá, <span id="nome-usuario">...</span>. Você está no controle.</h1>
+                <p>Um novo passo para cuidar do hoje e planejar o amanhã.</p>
+            </div>
+            <div class="header-right">
+                <span class="pro-badge">⭐ Premium</span>
+               <div class="date-badge" id="data-atual">Carregando...</div>
+            </div>
+        </div>
+        <!-- Card de Resumo Superior -->
+        <div class="summary-card">
+            <div class="summary-item">
+                <span class="summary-label">Saldo disponível</span>
+                <!-- Saldo dinâmico -->
+                <span class="summary-value value-green" id="valor-saldo">R$ 0,00</span>
+            </div>
+            <div class="summary-divider"></div>
+            <div class="summary-item">
+                <span class="summary-label">Despesas</span>
+                <!-- Despesas dinâmicas -->
+                <span class="summary-value value-red" id="valor-despesas">R$ 0,00</span>
+            </div>
+            <div class="summary-divider"></div>
+            <div class="summary-item export-section">
+                <span class="export-label">Resumo financeiro do mês</span>
+                <div class="export-buttons">
+                    <button class="export-btn" title="Exportar PDF" onclick="exportarDados('pdf')"><i class="ph ph-file-pdf"></i></button>
+                    <button class="export-btn" title="Exportar Excel" onclick="exportarDados('excel')"><i class="ph ph-file-xls"></i></button>
+                    <button class="export-btn" title="Exportar CSV" onclick="exportarDados('csv')"><i class="ph ph-file-csv"></i></button>
+                    <button class="export-btn" title="Exportar JSON" onclick="exportarDados('json')"><i class="ph ph-file-code"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid com os 3 Cards Inferiores -->
+        <div class="bottom-grid-3">
+            
+            <!-- Card 1: Simulador de Orçamento -->
+            <div class="info-card">
+                <h3>Simulador de orçamento</h3>
+                <div class="chart-container">
+                    <!-- O ID 'donut-chart' vai receber o background: conic-gradient via JS -->
+                    <div class="donut-chart" id="donut-chart">
+                        <div class="donut-chart-inner">
+                            <span>Rend.</span>
+                            <strong id="renda-simulador">R$ 0,00</strong>
+                        </div>
+                    </div>
+                    <!-- A legenda também será gerada dinamicamente -->
+                    <div class="chart-legend" id="legenda-grafico">
+                        <!-- Injetado via JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Meta Mensal -->
+            <div class="info-card">
+                <h3>Meta mensal</h3>
+                <div class="meta-header">
+                    <i class="ph ph-target" style="color: var(--text-primary);"></i> <span id="meta-nome">...</span>
+                </div>
+                <div class="meta-values">
+                    <span id="meta-valores">R$ 0,00 / R$ 0,00</span>
+                    <span class="meta-progress-box" id="meta-porcentagem">0%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <!-- A largura (width) será definida via JS -->
+                    <div class="progress-bar-fill" id="meta-barra"></div>
+                </div>
+            </div>
+
+            <!-- Card 3: Minhas Metas -->
+            <div class="info-card">
+                <h3>Minhas metas</h3>
+                <div class="goals-list" id="lista-metas">
+                    <!-- O JS vai preencher isso -->
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <script src=".././js/dashboard_premium.js"></script>
+    <script src=".././js/components.js"></script>
+
+</body>
+</html>

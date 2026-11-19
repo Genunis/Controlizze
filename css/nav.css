@@ -1,0 +1,78 @@
+/* ========================================== */
+/* ESTILOS EXCLUSIVOS DA NAVBAR               */
+/* ========================================== */
+
+.navbar {
+    background-color: #0f0f13;
+    border-bottom: 1px solid #2a2a35;
+    padding: 0.8rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-family: 'Inter', sans-serif;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo-img {
+    height: 40px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem; /* Diminuí o gap geral, pois o padding interno já dá espaçamento */
+    align-items: center;
+}
+
+/* Regra base para TODOS os links */
+.nav-links a {
+    color: #9494a8;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s;
+    padding: 8px 20px; 
+    border-radius: 20px; 
+    border: 1px solid transparent; 
+}
+
+.nav-links a:hover {
+    color: #f1f1f5;
+}
+
+/* Quando o link tem a classe .active */
+.nav-links a.active {
+    background-color: #8b5cf6;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.nav-links a.active:hover {
+    background-color: #7c3aed;
+}
+
+/* Avatar */
+.avatar-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #8b5cf6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.avatar-icon:hover {
+    background-color: #7c3aed;
+}

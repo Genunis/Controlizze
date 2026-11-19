@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href=".././css/style.css">
+    <link rel="stylesheet" href=".././css/config.css">
+    <title>Configurações - Controlizze</title>
+</head>
+<body>
+    <main class="container-principal">
+        <div class="header-page">
+            <h1>Configurações da conta</h1>
+            <p class="subtitle">Gerencie sua conta, segurança e privacidade em um só lugar.</p>
+        </div>
+        <div class="layout-grid">
+
+            <aside class="sidebar">
+                <div class="menu-section">
+                    <span class="menu-title">Minha conta</span>
+                    <a href="#" class="menu-item active" id="btn-pessoais">Dados pessoais</a>
+                    <a href="#" class="menu-item">Perfil financeiro</a>
+                    <a href="#" class="menu-item">Planos</a>
+                    <a href="#" class="menu-item" id="btn-config">Configurações</a>
+                </div>
+                <div class="menu-section">
+                    <span class="menu-title">Você está no controle.</span>
+                    <a href="#" class="menu-item">Sair da conta</a>
+                </div>
+            </aside>
+
+            <section class="content-area">
+                <!-- Container que vai receber os Dados Pessoais -->
+                <div id="view-pessoais" class="view-section">
+                    <!-- O JS vai injetar o HTML aqui -->
+                </div>
+
+                <!-- Container que vai receber as Configurações -->
+                <div id="view-config" class="view-section" style="display: none;">
+                    <!-- O JS vai injetar o HTML aqui -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src=".././js/components.js"></script>
+    <script src=".././js/config.js"></script>
+</body>
+</html>

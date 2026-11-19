@@ -1,0 +1,316 @@
+/* ========================================== */
+/* LAYOUT DASHBOARD             */
+/* ========================================== */
+
+.container-principal {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    width: 100%;
+    flex: 1;
+}
+
+.header-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.header-text .subtitle {
+    color: var(--primary-color);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.header-page h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.header-page p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.8rem;
+}
+
+.pro-badge {
+    background-color: rgba(139, 92, 246, 0.15);
+    color: var(--primary-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.date-badge {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* ========================================== */
+/* CARD DE RESUMO (Topo)                      */
+/* ========================================== */
+.summary-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.summary-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.summary-value {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.value-green { color: var(--color-success); }
+.value-red { color: var(--color-danger); }
+
+.summary-divider {
+    width: 1px;
+    background-color: var(--border-color);
+    height: 100%;
+}
+
+.export-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.export-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.export-buttons {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.export-btn {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.export-btn:hover {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+}
+
+/* ========================================== */
+/* GRID INFERIOR (3 Cards)                    */
+/* ========================================== */
+.bottom-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.info-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-card h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Card 1: Simulador (Gráfico Donut) --- */
+.chart-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.donut-chart {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.donut-chart::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: var(--bg-card);
+    border-radius: 50%;
+}
+
+.donut-chart-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.donut-chart-inner span {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.donut-chart-inner strong {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+}
+
+.chart-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+/* --- Card 2: Meta Mensal --- */
+.meta-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.meta-values {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.meta-progress-box {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.progress-bar-bg {
+    width: 100%;
+    height: 6px;
+    background-color: var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: auto;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    width: 0.6%;
+    transition: width 0.5s ease-in-out;
+}
+
+/* --- Card 3: Minhas metas --- */
+.goals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.goal-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+/* ========================================== */
+/* RESPONSIVIDADE                             */
+/* ========================================== */
+@media (max-width: 992px) {
+    .summary-card {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .summary-divider {
+        display: none;
+    }
+
+    .bottom-grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart-container {
+        justify-content: center;
+    }
+}
